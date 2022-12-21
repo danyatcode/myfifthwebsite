@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>background</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+          <div class="toggle"></div>
+           <div class="logo">Travel</div>
+
+
+        </header>
+
+        <video id="myVideo" src="videoplayback%20(2).mp4" muted loop autoplay></video>
+           <div class="overlay"></div>
+           <div class="text">
+               <h2>Our tours</h2>
+               <h3>exploring world</h3>
+               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aperiam asperiores eum, eos possimus, officiis, omnis hic maxime architecto at officia reprehenderit laudantium, iusto eius.</p>
+                <button id="myBtn" onclick="myFunction()">Pause</button>
+           </div>
+
+    </section>
+
+    <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+    </div>
+
+<script>
+    var video = document.getElementById("myVideo");
+    var btn = document.getElementById("myBtn");;
+    function myFunction(){
+        if (video.paused){
+            video.play();
+            btn.innerHTML = "Pause";
+        } else{
+            video.pause();
+            btn.innerHTML = "Play"
+        }
+    }
+
+    const menuToggle = document.querySelector('.toggle');
+    const showcase = document.querySelector('.showcase');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
